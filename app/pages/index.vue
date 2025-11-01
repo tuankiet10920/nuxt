@@ -2,7 +2,7 @@
 </script>
 <template>
     <div>
-        Hi, I'm Home Page!
+        Xin chào tôi là trang chủ!
     </div>
 </template>
 <style scoped></style>
