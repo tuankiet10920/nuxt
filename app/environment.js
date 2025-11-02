@@ -4,16 +4,32 @@
   http://localhost:5000
   https://phucansolutions.com/api
 */
-export const apiUrl = "http://localhost:5000/api";
-export const imageUrl = "http://localhost:5000";
+
+/**
+ * @target environment
+ * @desc CẤU HÌNH DATABASE CONFIG
+ * @option test
+ * @option production
+ * @option development
+ */
+export const environment = "production";
+
 export const configs = {
   debug: true,
+  is_replace_route: true,
+  environment,
   admin: {
     title: "ANNA BUILDINGS PANEL",
     prefix: "quan-tri",
   },
-  isReplaceRoute: true,
 };
+
+export const apiUrl =
+  environment == "production" ? "production_url" : "http://localhost:5000/api";
+
+export const imageUrl =
+  environment == "production" ? "production_url" : "http://localhost:5000";
+
 export const routesMap = [
   {
     en: "account",

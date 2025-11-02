@@ -13,10 +13,9 @@ export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
   debug: false,
-
   hooks: {
     "pages:extend"(routes) {
-      if (configs.isReplaceRoute) {
+      if (configs.is_replace_route) {
         let routesHasPath: RouteMapInterface[] = [];
 
         // lọc và chia ra các route có và không có chilren
